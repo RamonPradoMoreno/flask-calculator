@@ -39,5 +39,10 @@ def create_app(test_config=None):
     from . import blog
 
     app.register_blueprint(blog.bp)
+
+    from . import calculator
+
+    app.register_blueprint(calculator.bp)
+    # TODO: Check the index
     app.add_url_rule("/", endpoint="index")
     return app
