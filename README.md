@@ -11,7 +11,14 @@ My plan is to create a more backend oriented example with a simple calculator th
   ```python
   flask --app flaskr run --debug
   ```
-
+* Run tests:
+  ```python
+  pytest
+  ```
+* Build a coverage report:
+  ```python
+  coverage run -m pytest
+  ```
   # Testing commands
 ## Addition
 * For linux:
@@ -21,4 +28,13 @@ My plan is to create a more backend oriented example with a simple calculator th
 * For powershell:
     ```
     Invoke-RestMethod -Uri "http://127.0.0.1:5000/calculator/add" -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"left_operand":1,"right_operand":1}'
+    ```
+## History
+* For linux:
+    ```
+    curl --header "Content-Type: application/json" --request GET http://127.0.0.1:5000/calculator/history
+    ```
+* For powershell:
+    ```
+    Invoke-RestMethod -Uri "http://127.0.0.1:5000/calculator/history" -Method GET 
     ```

@@ -43,6 +43,10 @@ def create_app(test_config=None):
     from . import calculator
 
     app.register_blueprint(calculator.bp)
+
+    from . import history
+
+    app.register_blueprint(history.bp)
     # TODO: Check the index
     app.add_url_rule("/", endpoint="index")
     return app
