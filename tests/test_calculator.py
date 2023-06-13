@@ -15,9 +15,9 @@ def test_returns_200(client, app):
 @pytest.mark.parametrize(
     ("left_operand", "right_operand", "message"),
     (
-        (None, None, b"Missing some operands"),
-        (1, None, b"Missing some operands"),
-        (None, 1, b"Missing some operands"),
+        (None, None, b"At least one operand is missing"),
+        (1, None, b"At least one operand is missing"),
+        (None, 1, b"At least one operand is missing"),
     ),
 )
 def test_add_validate_input_not_empty(client, left_operand, right_operand, message):
@@ -34,9 +34,9 @@ def test_add_validate_input_not_empty(client, left_operand, right_operand, messa
 @pytest.mark.parametrize(
     ("left_operand", "right_operand", "message"),
     (
-        ("hello", "1", b"Operands are not numbers"),
-        ("1", "hello", b"Operands are not numbers"),
-        ("1,1", "1,1", b"Operands are not numbers"),
+        ("hello", "1", b"At least one operand is not a number"),
+        ("1", "hello", b"At least one operand is not a number"),
+        ("1,1", "1,1", b"At least one operand is not a number"),
     ),
 )
 def test_add_validate_input_number(client, left_operand, right_operand, message):
