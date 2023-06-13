@@ -5,11 +5,11 @@ My plan is to create a more backend oriented example with a simple calculator th
 # Important Commands
 * Initialize the DB:
   ```python
-  flask --app flaskr init-db
+  flask --app flaskcalculator init-db
   ```
 * Run the application locally:
   ```python
-  flask --app flaskr run --debug
+  flask --app flaskcalculator run --debug
   ```
 * Run tests:
   ```python

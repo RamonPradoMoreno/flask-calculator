@@ -1,6 +1,6 @@
 from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for, abort
 from decimal import Decimal, getcontext, InvalidOperation
-from flaskr.db import get_db
+from flaskcalculator.db import get_db
 
 # Set the maximum precision to x digits
 # This is important due to how floating point works in Python

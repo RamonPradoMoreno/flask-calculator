@@ -2,7 +2,7 @@ from decimal import Decimal, InvalidOperation, getcontext
 
 from flask import Blueprint, abort, flash, g, redirect, render_template, request, session, url_for
 
-from flaskr.db import get_db
+from flaskcalculator.db import get_db
 
 MAXIMUM_HISTORY_SIZE = 3
 
